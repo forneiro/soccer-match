@@ -4,6 +4,7 @@
   --alternative-text-color: #f7fafc;
   --alternative-text-color2: #757575;
   --alternative-text-color3: #d1d1d1;
+  --alternative-text-color4: #e9f6fd;
   --white: #ffffff;
   --black: #000000;
   --titleFont: "Outfit", sans-serif;
@@ -23,7 +24,6 @@ body {
   font-size: 1.6rem;
   font-family: var(--paragraphFont);
   margin: 0;
-  background-color: var(--alternative-text-color);
 }
 
 a {
@@ -31,31 +31,53 @@ a {
   color: var(--white);
 }
 
-i {
-  color: var(--principal-color);
+address {
+  font-style: normal;
 }
+
 h1 {
   margin: 24rem 0 0;
   font-size: 8rem;
 }
+
 h2 {
-  margin: 10rem 0 1rem;
   font-size: 4rem;
 }
+
 h3 {
   font-size: 2rem;
 }
+
 h1,
 h2,
 h3,
 button {
   font-family: var(--titleFont);
 }
+
+i {
+  color: var(--principal-color);
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid var(--alternative-text-color3);
+}
+
 img {
   max-width: 100%;
 }
+
 li {
   list-style-type: none;
+}
+
+textarea {
+  resize: none;
 }
 
 ul {
@@ -65,9 +87,10 @@ ul {
 /* ////////////////////////////////////////////////////////// */
 /* Tools */
 .container {
-  max-width: 80%;
+  max-width: 120rem;
   margin: 0 auto;
 }
+
 .btn,
 .btn__ticket {
   border: none;
@@ -77,16 +100,28 @@ ul {
   transition: 0.3s ease;
   font-size: 1.8rem;
 }
+
 .btn {
   color: var(--white);
   background-color: var(--principal-color);
 }
+
+.btn__ticket {
+  background-color: var(--alternative-text-color);
+}
+
 .btn__ticket:hover {
-  box-shadow: 0 0 2rem var(--alternative-text-color3);
+  box-shadow: 0 0 1rem var(--alternative-text-color3);
 }
+
 .btn:hover {
-  box-shadow: 0 0 2rem var(--principal-color);
+  box-shadow: 0 0 1rem var(--principal-color);
 }
+
+.margin-top {
+  padding: 12rem 0 1rem;
+}
+
 /* ////////////////////////////////////////////////////////// */
 /* header */
 .header {
@@ -101,6 +136,9 @@ ul {
   color: var(--white);
   height: 100vh;
   text-align: center;
+}
+.header i {
+  margin-right: 0.6rem;
 }
 .header .container {
   position: relative;
@@ -125,6 +163,7 @@ ul {
   width: 100%;
   position: absolute;
 }
+
 /* ////////////////////////////////////////////////////////// */
 /* nav */
 .nav {
@@ -132,10 +171,12 @@ ul {
   justify-content: space-between;
   padding: 2rem;
 }
+
 .nav a:hover {
   color: var(--principal-color);
   transition: 0.4s ease;
 }
+
 .nav__links {
   display: flex;
   gap: 2rem;
@@ -144,8 +185,10 @@ ul {
 /* ////////////////////////////////////////////////////////// */
 /* Tickets */
 .tickets {
-  background-color: var();
+  padding: 12rem 0 10rem;
+  background-color: var(--alternative-text-color);
 }
+
 .tickets__intro {
   text-align: center;
 }
@@ -192,8 +235,9 @@ ul {
   gap: 2rem;
   margin: 1rem 0;
 }
+
 .tickets__benefits li::before {
-  content: "✅";
+  content: "✅ ";
 }
 
 .ticket button {
@@ -203,13 +247,14 @@ ul {
 .ticket footer {
   margin: 2rem 0;
 }
+
 .tickets__popular {
   border: 2px solid var(--principal-color);
 }
 
 .tickets__popular-text {
   position: absolute;
-  transform: translate(46%, -130%);
+  transform: translate(44%, -130%);
   background-color: var(--principal-color);
   color: var(--alternative-text-color);
   padding: 0.6rem 1.6rem;
@@ -223,10 +268,92 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10rem;
+  margin-bottom: 10rem;
+  line-height: 2.6rem;
 }
-.contact__info {
+
+.contact__info h2 {
+  margin: 0;
+}
+
+.contact__info address {
+  margin-top: 4rem;
+}
+
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .contact__links a {
   color: var(--black);
+}
+
+.contact__details {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact__details i {
+  background-color: var(--alternative-text-color4);
+  padding: 2rem;
+  border-radius: 50%;
+  font-size: 3rem;
+}
+
+.contact__details h3 {
+  margin: 0 0 0.9rem;
+}
+
+/* Formulario */
+.form {
+  background-color: var(--white);
+  padding: 4rem;
+  border-radius: 1rem;
+  flex-basis: 50%;
+}
+
+.form button {
+  width: 100%;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__field label {
+  margin-bottom: 0.6rem;
+}
+
+.form__field input,
+.form__field textarea {
+  border-radius: 0.6rem;
+  border: 1px solid var(--alternative-text-color3);
+  padding: 1rem;
+}
+
+/* ////////////////////////////////////////////////////////// */
+/* Footer */
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* ////////////////////////////////////////////////////////// */
+/* Responsive */
+/* Tablet */
+@media (min-width: 1000px) {
 }
