@@ -14,6 +14,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -87,7 +88,7 @@ ul {
 /* ////////////////////////////////////////////////////////// */
 /* Tools */
 .container {
-  max-width: 120rem;
+  max-width: min(140rem, 90%);
   margin: 0 auto;
 }
 
@@ -169,7 +170,7 @@ ul {
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .nav a:hover {
@@ -199,8 +200,10 @@ ul {
 
 .tickets__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 6rem;
+  flex-wrap: wrap;
+  gap: 4rem;
 }
 
 .ticket {
@@ -268,13 +271,20 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10rem;
+  gap: 8rem;
   margin-bottom: 10rem;
-  line-height: 2.6rem;
+  margin-top: 10rem;
+}
+
+.contact__info {
+  flex-basis: 50%;
 }
 
 .contact__info h2 {
   margin: 0;
+}
+.contact__info p {
+  line-height: 2.6rem;
 }
 
 .contact__info address {
@@ -310,10 +320,12 @@ ul {
 
 /* Formulario */
 .form {
-  background-color: var(--white);
+  background-color: var(--alternative-text-color);
   padding: 4rem;
   border-radius: 1rem;
   flex-basis: 50%;
+  max-width: 50rem;
+  width: min(50rem, 100%);
 }
 
 .form button {
@@ -355,5 +367,33 @@ ul {
 /* ////////////////////////////////////////////////////////// */
 /* Responsive */
 /* Tablet */
-@media (min-width: 1000px) {
+@media (max-width: 1400px) {
+  .contact {
+    flex-direction: column;
+  }
+  .contact__info {
+    align-self: flex-start;
+  }
+  .form {
+  }
+}
+@media (max-width: 968px) {
+  h1 {
+    margin-top: 20rem;
+    font-size: 6rem;
+  }
+}
+@media (max-width: 698px) {
+  h1 {
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+    font-size: 5rem;
+  }
+  .header__match-info {
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+  .btn {
+    width: 100%;
+  }
 }

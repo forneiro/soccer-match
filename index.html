@@ -21,12 +21,12 @@
   <body>
     <header class="header">
       <div class="hero"></div>
-      <div class="container">
+      <section class="container">
         <nav class="nav">
           <a href="#"><i class="fa-solid fa-futbol"></i> City Derby</a>
           <div class="nav__links">
-            <a href="#">Tickets</a>
-            <a href="#">Contact</a>
+            <a href="#tickets">Tickets</a>
+            <a href="#contact">Contact</a>
           </div>
         </nav>
 
@@ -38,35 +38,35 @@
             <li><i class="fa-regular fa-clock"></i> Kick-off: 20:00</li>
             <li><i class="fa-solid fa-location-dot"></i>Estadio Centenario</li>
           </ul>
-          <button class="btn">Get your tickets now</button>
+          <a class="btn" href="#tickets">Get your tickets now</a>
         </section>
-      </div>
+      </section>
     </header>
     <!-- .HEADER -->
 
     <main>
-      <section class="tickets">
+      <section class="tickets" id="tickets">
         <div class="container">
-          <div class="tickets__intro">
+          <header class="tickets__intro">
             <h2>Choose your ticket</h2>
             <p>
               Experience the thrill of the match from the best seats in the
               house. Limited tickets available!
             </p>
-          </div>
-          <div class="tickets__container">
+          </header>
+          <section class="tickets__container">
             <article class="ticket">
               <header>
                 <h3>General Admission</h3>
                 <p class="tickets__description">Upper tier seating</p>
               </header>
-              <div>
+              <section>
                 <p><span class="tickets__price">$45</span> / person</p>
                 <ul class="tickets__benefits">
                   <li>Standard view</li>
                   <li>Access to food stails</li>
                 </ul>
-              </div>
+              </section>
               <footer>
                 <button class="btn__ticket">Select Ticket</button>
               </footer>
@@ -77,14 +77,14 @@
                 <h3>Fan Zone</h3>
                 <p class="tickets__description">Behind the goal</p>
               </header>
-              <div>
+              <section>
                 <p><span class="tickets__price">$75</span> / person</p>
                 <ul class="tickets__benefits">
                   <li>Closest to the action</li>
                   <li>Vibrant atmosphere</li>
                   <li>Includes team flag</li>
                 </ul>
-              </div>
+              </section>
               <footer>
                 <button class="btn__ticket">Select Ticket</button>
               </footer>
@@ -95,14 +95,14 @@
                 <h3>Premium Seating</h3>
                 <p class="tickets__description">Lower tier - sideline</p>
               </header>
-              <div>
+              <section>
                 <p><span class="tickets__price">$120</span> / person</p>
                 <ul class="tickets__benefits">
                   <li>Excellent center-field view</li>
                   <li>Comfortable padded seats</li>
                   <li>Complimentary drinks</li>
                 </ul>
-              </div>
+              </section>
               <footer>
                 <button class="btn">Select Ticket</button>
               </footer>
@@ -114,25 +114,25 @@
                 <h3>VIP box</h3>
                 <p class="tickets__description">Private suite</p>
               </header>
-              <div>
+              <section>
                 <p><span class="tickets__price">$350</span> / person</p>
                 <ul class="tickets__benefits">
                   <li>Private box for 10 guests</li>
                   <li>All-inclusive food & drinks</li>
                   <li>VIP parking included</li>
                 </ul>
-              </div>
+              </section>
               <footer>
                 <button class="btn__ticket">Select Ticket</button>
               </footer>
             </article>
             <!--.ARTICLE-->
-          </div>
+          </section>
         </div>
       </section>
       <!--.TICKETS-->
 
-      <section class="contact container">
+      <section class="contact container" id="contact">
         <section class="contact__info">
           <h2>Have Questions?</h2>
           <p>
@@ -163,18 +163,35 @@
           <div class="form__container">
             <div class="form__field">
               <label for="name">Full Name</label>
-              <input type="text" name="" id="" placeholder="Your name" />
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your name"
+                required
+              />
             </div>
             <div class="form__field">
               <label for="email">Email Address</label>
-              <input type="email" placeholder="Your email" />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your email"
+                required
+              />
             </div>
             <div class="form__field">
               <label for="message">Message</label>
-              <textarea rows="10" name="" id=""></textarea>
+              <textarea
+                rows="10"
+                name="message"
+                id="message"
+                required
+              ></textarea>
             </div>
           </div>
-          <button class="btn">Send Message</button>
+          <button class="btn" id="send-message">Send Message</button>
         </form>
       </section>
       <!--.CONTACT-->
@@ -182,7 +199,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p>2024 City Derby. All rights reserved.</p>
+        <p>2025 City Derby. All rights reserved.</p>
         <p>Experience the passion. Feel the roar.</p>
       </div>
     </footer>
@@ -192,5 +209,8 @@
       src="https://kit.fontawesome.com/337d133e29.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- SCRIPTS -->
+    <script src="scripts.js"></script>
   </body>
 </html>
