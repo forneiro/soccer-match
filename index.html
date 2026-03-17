@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -55,7 +55,7 @@
             </p>
           </header>
           <section class="tickets__container">
-            <article class="ticket">
+            <article class="ticket" data-id="0">
               <header>
                 <h3>General Admission</h3>
                 <p class="tickets__description">Upper tier seating</p>
@@ -68,11 +68,11 @@
                 </ul>
               </section>
               <footer>
-                <button class="btn__ticket">Select Ticket</button>
+                <button class="btn__ticket ticket-btn">Select Ticket</button>
               </footer>
             </article>
             <!--.ARTICLE-->
-            <article class="ticket">
+            <article class="ticket" data-id="1">
               <header>
                 <h3>Fan Zone</h3>
                 <p class="tickets__description">Behind the goal</p>
@@ -86,11 +86,11 @@
                 </ul>
               </section>
               <footer>
-                <button class="btn__ticket">Select Ticket</button>
+                <button class="btn__ticket ticket-btn">Select Ticket</button>
               </footer>
             </article>
             <!--.ARTICLE-->
-            <article class="ticket tickets__popular">
+            <article class="ticket tickets__popular" data-id="2">
               <header>
                 <h3>Premium Seating</h3>
                 <p class="tickets__description">Lower tier - sideline</p>
@@ -104,12 +104,12 @@
                 </ul>
               </section>
               <footer>
-                <button class="btn">Select Ticket</button>
+                <button class="btn ticket-btn">Select Ticket</button>
               </footer>
               <p class="tickets__popular-text">Most popular</p>
             </article>
             <!--.ARTICLE-->
-            <article class="ticket">
+            <article class="ticket" data-id="3">
               <header>
                 <h3>VIP box</h3>
                 <p class="tickets__description">Private suite</p>
@@ -123,7 +123,7 @@
                 </ul>
               </section>
               <footer>
-                <button class="btn__ticket">Select Ticket</button>
+                <button class="btn__ticket ticket-btn">Select Ticket</button>
               </footer>
             </article>
             <!--.ARTICLE-->
@@ -195,6 +195,35 @@
         </form>
       </section>
       <!--.CONTACT-->
+
+      <div class="modal-backdrop hide">
+        <dialog class="modal">
+          <div class="modal__info">
+            <h3 id="modal__zone"></h3>
+            <p id="modal__place">Place</p>
+            <p>Price/person: <span id="modal__price"></span></p>
+          </div>
+          <form class="modal__form" action="">
+            <p class="modal__field">
+              <label for="">Nombre Completo</label>
+              <input type="text" required minlength="5" />
+            </p>
+            <p class="modal__field">
+              <label for="">E-mail</label>
+              <input type="email" required />
+            </p>
+            <p class="modal__field">
+              <label for="">Número de tarjeta</label>
+              <input type="text" required />
+            </p>
+            <div class="modal__actions">
+              <button class="modal__submit btn">Confirmar</button>
+              <button class="modal__cancel btn__ticket">Cancelar</button>
+            </div>
+          </form>
+        </dialog>
+      </div>
+      <!--.MODAL-->
     </main>
 
     <footer class="footer">
